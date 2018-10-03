@@ -7,6 +7,7 @@
       </div>
     </header><!-- /ヘッダー -->
 
+    <!-- ナビゲーションメニュー -->
     <nav-container />
 
     <!-- メイン -->
@@ -18,9 +19,7 @@
       <news-list />
 
       <!-- コンテンツ02 -->
-      <div class="py-4">
-
-      </div><!-- /コンテンツ02 -->
+      <about-section />
 
 
       <!-- コンテンツ03 -->
@@ -50,13 +49,15 @@
 import NavContainer from './components/NavContainer.vue'
 import MainVisual from './components/MainVisual.vue'
 import NewsList from './components/NewsList.vue'
+import AboutSection from './components/AboutSection.vue'
 
 export default {
   name: 'app',
   components: {
     NavContainer,
     MainVisual,
-    NewsList
+    NewsList,
+    AboutSection
   },
   data () {
     return {
