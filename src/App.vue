@@ -15,9 +15,7 @@
       <main-visual />
 
       <!-- コンテンツ01 -->
-      <div class="py-4">
-
-      </div><!-- /コンテンツ01 -->
+      <news-list />
 
       <!-- コンテンツ02 -->
       <div class="py-4">
@@ -51,12 +49,14 @@
 <script>
 import NavContainer from './components/NavContainer.vue'
 import MainVisual from './components/MainVisual.vue'
+import NewsList from './components/NewsList.vue'
 
 export default {
   name: 'app',
   components: {
     NavContainer,
-    MainVisual
+    MainVisual,
+    NewsList
   },
   data () {
     return {
