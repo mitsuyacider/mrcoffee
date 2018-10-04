@@ -13,7 +13,7 @@
           <div v-for="(item, index) in menuData">
             <!-- タブ01 -->
             <a href="#panel-menu01" class="nav-item nav-link"
-              :class="{active: selectedIndex==index}" id=menuData[index].id
+              :class="{active: selectedIndex==index}" :id="'#' + menuData[index].id"
               data-toggle="tab" role="tab" aria-controls="panel-menu01"
               aria-selected="true" @click.prevent="onSelectTab(index)">
               {{ menuData[index].title }}
@@ -22,15 +22,8 @@
         </div><!-- /タブ型ナビゲーション -->
 
         <!-- タブパネル　コンテンツ -->
-        <div class="tab-content" id="panel-menus">
-          <!-- パネル01 -->
-          <menu-detail :isActive="true"/>
-          <!-- パネル02 -->
-          <menu-detail />
-          <!-- パネル03 -->
-          <menu-detail />
-          <!-- パネル04 -->
-          <menu-detail />
+        <div class="tab-content" id="panel-menus" v-for="(item, index) in menuData" >
+          <menu-detail :detailData="menuData[index]" :isActive="index==selectedIndex"/>
         </div><!-- /タブパネル　コンテンツ -->
       </div>
     </section>
@@ -54,7 +47,6 @@ export default {
   },
   methods: {
     onSelectTab: function(index) {
-      console.log(index);
       this.selectedIndex = index
     },
     readyMenuData: function () {
@@ -62,6 +54,7 @@ export default {
         {
           title: "COFFEE",
           id: "tab-menu01",
+          imageFile: "coffee.jpg",
           tableContents: [
             {
               "itemName" :  "M ブレンド",
@@ -84,6 +77,7 @@ export default {
         {
           title: "モーニング",
           id:    "tab-menu02",
+          imageFile: "coffee.jpg",
           tableContents: [
             {
               "itemName" :  "M ブレンド",
@@ -106,6 +100,7 @@ export default {
         {
           title: "ランチ",
           id:    "tab-menu03",
+          imageFile: "coffee.jpg",
           tableContents: [
             {
               "itemName" :  "M ブレンド",
@@ -128,6 +123,7 @@ export default {
         {
           title: "ケーキ",
           id   : "tab-menu04",
+          imageFile: "coffee.jpg",
           tableContents: [
             {
               "itemName" :  "M ブレンド",
