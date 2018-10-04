@@ -26,11 +26,9 @@
 
       <!-- コンテンツ04 -->
       <coupon-section />
-      
-      <!-- コンテンツ05 -->
-      <div class="py-4">
 
-      </div><!-- /コンテンツ05 -->
+      <!-- コンテンツ05 -->
+      <info-section />
     </main><!-- /メイン -->
 
     <!-- フッター -->
@@ -47,6 +45,7 @@ import NewsList from './components/NewsList.vue'
 import AboutSection from './components/AboutSection.vue'
 import MenuSection from './components/MenuSection.vue'
 import CouponSection from './components/CouponSection.vue'
+import InfoSection from './components/InfoSection.vue'
 
 export default {
   name: 'app',
@@ -56,7 +55,8 @@ export default {
     NewsList,
     AboutSection,
     MenuSection,
-    CouponSection
+    CouponSection,
+    InfoSection
   },
   data () {
     return {
