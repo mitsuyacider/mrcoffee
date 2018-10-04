@@ -1,7 +1,7 @@
 <template>
   <!-- /コンテンツ03 -->
-  <div class="py-4">
-    <section id="menu">
+  <div class="py-4 border">
+    <section id="menu" class="border">
       <div class="container border">
         <h3 class="mb-3 border">Menu</h3>
         <p class="border">カフェ Mr. M COFFEEのメニューです。掲載していない季節限定メニューは
