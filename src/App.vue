@@ -25,10 +25,8 @@
       <menu-section />
 
       <!-- コンテンツ04 -->
-      <div class="py-4">
-
-      </div><!-- /コンテンツ04 -->
-
+      <coupon-section />
+      
       <!-- コンテンツ05 -->
       <div class="py-4">
 
@@ -48,6 +46,7 @@ import MainVisual from './components/MainVisual.vue'
 import NewsList from './components/NewsList.vue'
 import AboutSection from './components/AboutSection.vue'
 import MenuSection from './components/MenuSection.vue'
+import CouponSection from './components/CouponSection.vue'
 
 export default {
   name: 'app',
@@ -56,7 +55,8 @@ export default {
     MainVisual,
     NewsList,
     AboutSection,
-    MenuSection
+    MenuSection,
+    CouponSection
   },
   data () {
     return {
