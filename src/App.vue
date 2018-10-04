@@ -32,9 +32,7 @@
     </main><!-- /メイン -->
 
     <!-- フッター -->
-    <footer class="py-4">
-
-    </footer><!-- /フッター -->
+    <top-footer />
   </div>
 </template>
 
@@ -46,6 +44,7 @@ import AboutSection from './components/AboutSection.vue'
 import MenuSection from './components/MenuSection.vue'
 import CouponSection from './components/CouponSection.vue'
 import InfoSection from './components/InfoSection.vue'
+import TopFooter from './components/TopFooter.vue'
 
 export default {
   name: 'app',
@@ -56,7 +55,8 @@ export default {
     AboutSection,
     MenuSection,
     CouponSection,
-    InfoSection
+    InfoSection,
+    TopFooter
   },
   data () {
     return {
