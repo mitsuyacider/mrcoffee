@@ -1,33 +1,31 @@
 <template>
-  <div class="nav-container">
-    <!-- ナビゲーション -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
-      <!-- サブコンテナ -->
-      <div class="container">
-        <!-- ブランド名 -->
-        <a href="index.html" class="navbar-brand">Mr.M COFFEE</a>
-        <!-- 切り替えボタン -->
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=
-        "#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label=
-        "Toggle navigation">
+  <!-- ナビゲーション -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+    <!-- サブコンテナ -->
+    <div class="container border">
+      <!-- ブランド名 -->
+      <a href="index.html" class="navbar-brand">Mr.M COFFEE</a>
+      <!-- 切り替えボタン -->
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=
+      "#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label=
+      "Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      </div><!-- /サブコンテナ -->
-
+      
       <!-- ナビゲーション -->
-      <div class="collapse navbar-collapse" id="navbar-content">
+      <div class="collapse navbar-collapse border" id="navbar-content">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a href="#">Top <span class="sr-only">(current)</span> </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">About</a>
+            <a href="#about" class="nav-link">About</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Menu</a>
+            <a href="#menu" class="nav-link">Menu</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Coupon</a>
+            <a href="#coupon" class="nav-link">Coupon</a>
           </li>
           <!-- ドロップダウン -->
           <li class="nav-item dropdown">
@@ -47,7 +45,8 @@
             <a href="contact.html" class="nav-link btn btn-info">Contact</a>
           </li>
         </ul>
-      </div>
-    </nav><!-- /ナビゲーション -->
-  </div>
+      </div><!-- /ナビゲーション -->
+
+    </div><!-- /サブコンテナ -->
+  </nav>
 </template>
