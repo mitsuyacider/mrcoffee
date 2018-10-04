@@ -21,11 +21,8 @@
       <!-- コンテンツ02 -->
       <about-section />
 
-
       <!-- コンテンツ03 -->
-      <div class="py-4">
-
-      </div><!-- /コンテンツ03 -->
+      <menu-section />
 
       <!-- コンテンツ04 -->
       <div class="py-4">
@@ -50,6 +47,7 @@ import NavContainer from './components/NavContainer.vue'
 import MainVisual from './components/MainVisual.vue'
 import NewsList from './components/NewsList.vue'
 import AboutSection from './components/AboutSection.vue'
+import MenuSection from './components/MenuSection.vue'
 
 export default {
   name: 'app',
@@ -57,7 +55,8 @@ export default {
     NavContainer,
     MainVisual,
     NewsList,
-    AboutSection
+    AboutSection,
+    MenuSection
   },
   data () {
     return {
