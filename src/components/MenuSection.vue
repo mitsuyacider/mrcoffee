@@ -2,63 +2,153 @@
   <!-- /コンテンツ03 -->
   <div class="py-4">
     <section id="menu">
-      <div class="container">
-        <h3 class="mb-3">Menu</h3>
-        <p>カフェ Mr. M COFFEEのメニューです。掲載していない季節限定メニューはMr.M COFFEEの
-        <a href="#">ブログ</a>にて紹介します。</p>
+      <div class="container border">
+        <h3 class="mb-3 border">Menu</h3>
+        <p class="border">カフェ Mr. M COFFEEのメニューです。掲載していない季節限定メニューは
+          Mr.M COFFEEの<a href="#">ブログ</a>にて紹介します。
+        </p>
 
         <!-- タブ型ナビゲーション -->
-        <div class="nav nav-tabs" id="tab-menus" role="tablist">
-          <!-- タブ01 -->
-          <a href="#panel-menu01" class="nav-item nav-link active" id="tab-menu01"
-            data-toggle="tab" role="tab" aria-controls="panel-menu01"
-            aria-selected="true">
-            コーヒー
-          </a>
-          <!-- タブ02 -->
-          <a href="#panel-menu02" class="nav-item nav-link" id="tab-menu02"
-             data-toggle="tab" role="tab" aria-controls="panel-menu02"
-             aria-selected="false">
-             モーニング
-          </a>
-          <!-- タブ03 -->
-          <a href="#panel-menu03" class="nav-item nav-link" id="tab-menu03"
-             data-toggle="tab" role="tab" aria-controls="panel-menu03"
-             aria-selected="false">
-             ランチ
-          </a>
-          <!-- タブ04 -->
-          <a href="#panel-menu04" class="nav-item nav-link" id="tab-menu04"
-             data-toggle="tab" role="tab" aria-controls="panel-menu04"
-             aria-selected="false">
-             ケーキ
-          </a>
+        <div class="nav nav-tabs border" id="tab-menus" role="tablist">
+          <div v-for="(item, index) in menuData">
+            <!-- タブ01 -->
+            <a href="#panel-menu01" class="nav-item nav-link"
+              :class="{active: selectedIndex==index}" id=menuData[index].id
+              data-toggle="tab" role="tab" aria-controls="panel-menu01"
+              aria-selected="true" @click.prevent="onSelectTab(index)">
+              {{ menuData[index].title }}
+            </a>
+          </div>
         </div><!-- /タブ型ナビゲーション -->
 
         <!-- タブパネル　コンテンツ -->
         <div class="tab-content" id="panel-menus">
           <!-- パネル01 -->
-          <div class="tab-pane fade show active border border-top-0" id="panel-menu01"
-                role="tabpanel" aria-labelledby="tab-menu01">
-                (コーヒーのメニュー表)
-          </div>
+          <menu-detail :isActive="true"/>
           <!-- パネル02 -->
-          <div class="tab-pane fade border border-top-0" id="panel-menu02"
-                role="tabpanel" aria-labelledby="tab-menu02">
-                (コーヒーのメニュー表2)
-          </div>
+          <menu-detail />
           <!-- パネル03 -->
-          <div class="tab-pane fade border border-top-0" id="panel-menu03"
-                role="tabpanel" aria-labelledby="tab-menu03">
-                (コーヒーのメニュー表3)
-          </div>
+          <menu-detail />
           <!-- パネル04 -->
-          <div class="tab-pane fade border border-top-0" id="panel-menu04"
-                role="tabpanel" aria-labelledby="tab-menu04">
-                (コーヒーのメニュー表4)
-          </div>
+          <menu-detail />
         </div><!-- /タブパネル　コンテンツ -->
       </div>
     </section>
   </div><!-- /コンテンツ03 -->
 </template>
+
+<script>
+import MenuDetail from './MenuDetail.vue'
+export default {
+  components: {
+    MenuDetail
+  },
+  data () {
+    return {
+      menuData: [],
+      selectedIndex: 0
+    }
+  },
+  created () {
+    this.menuData = this.readyMenuData()
+  },
+  methods: {
+    onSelectTab: function(index) {
+      console.log(index);
+      this.selectedIndex = index
+    },
+    readyMenuData: function () {
+      return [
+        {
+          title: "COFFEE",
+          id: "tab-menu01",
+          tableContents: [
+            {
+              "itemName" :  "M ブレンド",
+              "itemPrice" : "390円（税別）"
+            },
+            {
+              "itemName" :  "M ブレンド",
+              "itemPrice" : "390円（税別）"
+            },
+            {
+              "itemName" :  "M ブレンド",
+              "itemPrice" : "390円（税別）"
+            },
+            {
+              "itemName" :  "M ブレンド",
+              "itemPrice" : "390円（税別）"
+            }
+          ]
+        },
+        {
+          title: "モーニング",
+          id:    "tab-menu02",
+          tableContents: [
+            {
+              "itemName" :  "M ブレンド",
+              "itemPrice" : "390円（税別）"
+            },
+            {
+              "itemName" :  "M ブレンド",
+              "itemPrice" : "390円（税別）"
+            },
+            {
+              "itemName" :  "M ブレンド",
+              "itemPrice" : "390円（税別）"
+            },
+            {
+              "itemName" :  "M ブレンド",
+              "itemPrice" : "390円（税別）"
+            }
+          ]
+        },
+        {
+          title: "ランチ",
+          id:    "tab-menu03",
+          tableContents: [
+            {
+              "itemName" :  "M ブレンド",
+              "itemPrice" : "390円（税別）"
+            },
+            {
+              "itemName" :  "M ブレンド",
+              "itemPrice" : "390円（税別）"
+            },
+            {
+              "itemName" :  "M ブレンド",
+              "itemPrice" : "390円（税別）"
+            },
+            {
+              "itemName" :  "M ブレンド",
+              "itemPrice" : "390円（税別）"
+            }
+          ]
+        },
+        {
+          title: "ケーキ",
+          id   : "tab-menu04",
+          tableContents: [
+            {
+              "itemName" :  "M ブレンド",
+              "itemPrice" : "390円（税別）"
+            },
+            {
+              "itemName" :  "M ブレンド",
+              "itemPrice" : "390円（税別）"
+            },
+            {
+              "itemName" :  "M ブレンド",
+              "itemPrice" : "390円（税別）"
+            },
+            {
+              "itemName" :  "M ブレンド",
+              "itemPrice" : "390円（税別）"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+</script>
