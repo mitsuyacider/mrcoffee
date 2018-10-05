@@ -4,7 +4,9 @@
     <!-- サブコンテナ -->
     <div class="container border">
       <!-- ブランド名 -->
-      <a href="index.html" class="navbar-brand">Mr.M COFFEE</a>
+      <!-- <a href="index.html" class="navbar-brand">Mr.M COFFEE</a> -->
+      <router-link class="navbar-brand" to="/">Mr.M COFFEE<span class="sr-only">(current)</span></router-link>
+
       <!-- 切り替えボタン -->
       <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=
       "#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label=
@@ -16,7 +18,7 @@
       <div class="collapse navbar-collapse border" id="navbar-content">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a href="#">Top <span class="sr-only">(current)</span> </a>
+            <router-link to="/">Top<span class="sr-only">(current)</span></router-link>
           </li>
           <li class="nav-item">
             <a href="#about" class="nav-link">About</a>
@@ -41,12 +43,8 @@
 
         <!-- 右側メニュー : Contactページへのリンク -->
         <ul class="navbar-nav">
-          <li class="nav-item">
-
-
-            <a href="contact.html" class="nav-link btn btn-info">
-              <router-link to="contact">Contact</router-link>
-            </a>
+          <li class="nav-item nav-link btn btn-info">
+            <router-link to="/contact">Contact</router-link>
           </li>
         </ul>
       </div><!-- /ナビゲーション -->
