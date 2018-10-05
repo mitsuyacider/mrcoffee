@@ -4,7 +4,6 @@
     <!-- サブコンテナ -->
     <div class="container border">
       <!-- ブランド名 -->
-      <!-- <a href="index.html" class="navbar-brand">Mr.M COFFEE</a> -->
       <router-link class="navbar-brand" to="/">Mr.M COFFEE<span class="sr-only">(current)</span></router-link>
 
       <!-- 切り替えボタン -->
@@ -21,13 +20,13 @@
             <router-link to="/">Top<span class="sr-only">(current)</span></router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/#about">About</router-link>
+            <a href="/#about" class="nav-link">About</a>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/#menu">Menu</router-link>
+            <a href="/#menu" class="nav-link">Menu</a>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/#coupon">Coupon</router-link>
+            <a href="/#coupon" class="nav-link">Coupon</a>
           </li>
           <!-- ドロップダウン -->
           <li class="nav-item dropdown">
@@ -35,8 +34,8 @@
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Information
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <router-link class="dropdown-item" to="/#shop">Shop</router-link>
-              <router-link class="dropdown-item" to="/#access">Access</router-link>
+              <a href="/#shop" class="dropdown-item">Shop</a>
+              <a href="/#access" class="dropdown-item">Access</a>
             </div>
           </li>
         </ul>
