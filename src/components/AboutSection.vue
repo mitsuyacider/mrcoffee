@@ -12,8 +12,8 @@
               店主が世界中のコーヒー豆を厳選し、コーヒー豆の種類に合わせ、心を込めて焙煎、抽出しております。
               また、女性にちょうど良いボリュームのワンプレートランチ、季節のスイーツなどもご好評いただいております。
             </p>
-            <a href="#" class="btn btn-info">メニューを見る</a>
-            <a href="#" class="btn btn-info">店舗情報を見る</a>
+            <a href="#menu" class="btn btn-info">メニューを見る</a>
+            <a href="#shop" class="btn btn-info">店舗情報を見る</a>
           </div>
           <div class="col-md-4 border">
             <img src="../assets/about01.jpg" alt="店主が焙煎したこだわりのコーヒー" class="img-fluid">

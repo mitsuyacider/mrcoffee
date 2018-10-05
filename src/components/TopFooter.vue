@@ -4,12 +4,12 @@
     <div class="container text-center border">
       <ul class="nav justify-content-center mb-3 border">
         <li><a href="#" class="nav-link">Top</a></li>
-        <li><a href="#" class="nav-link">News</a></li>
-        <li><a href="#" class="nav-link">About</a></li>
-        <li><a href="#" class="nav-link">Menu</a></li>
-        <li><a href="#" class="nav-link">Coupon</a></li>
-        <li><a href="#" class="nav-link">Information</a></li>
-        <li><a href="#" class="nav-link">Contact</a></li>
+        <li><a href="#news" class="nav-link">News</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#coupon" class="nav-link">Coupon</a></li>
+        <li><a href="#shop" class="nav-link">Information</a></li>
+        <li><a href="#contact.html" class="nav-link">Contact</a></li>
       </ul>
       <p class="border"><small>Copyright &copy;2017 Mr.M COFFEE, All Rights Reserved.</small></p>
     </div>

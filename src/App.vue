@@ -1,38 +1,6 @@
 <template>
   <div id="app">
-    <!-- ヘッダー -->
-    <header class="py-4">
-      <div class="container text-center border">
-        <h1><a href="index.html"><img src="./assets/logo.png" alt="カフェ Mr.M COFFEE"></a></h1>
-      </div>
-    </header><!-- /ヘッダー -->
-
-    <!-- ナビゲーションメニュー -->
-    <nav-container />
-
-    <!-- メイン -->
-    <main>
-      <!-- メインビジュアル -->
-      <main-visual />
-
-      <!-- コンテンツ01 -->
-      <news-list />
-
-      <!-- コンテンツ02 -->
-      <about-section />
-
-      <!-- コンテンツ03 -->
-      <menu-section />
-
-      <!-- コンテンツ04 -->
-      <coupon-section />
-
-      <!-- コンテンツ05 -->
-      <info-section />
-    </main><!-- /メイン -->
-
-    <!-- フッター -->
-    <top-footer />
+    <router-view />
   </div>
 </template>
 
@@ -67,6 +35,13 @@ export default {
 </script>
 
 <style lang="scss">
+$spacer: 85px;
+
+section {
+  margin-top: -$spacer;
+  padding-top: $spacer;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

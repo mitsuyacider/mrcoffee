@@ -11,7 +11,7 @@
       "Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      
+
       <!-- ナビゲーション -->
       <div class="collapse navbar-collapse border" id="navbar-content">
         <ul class="navbar-nav mr-auto">
@@ -33,8 +33,8 @@
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Information
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a href="#" class="dropdown-item">Shop</a>
-              <a href="#" class="dropdown-item">Access</a>
+              <a href="#shop" class="dropdown-item">Shop</a>
+              <a href="#access" class="dropdown-item">Access</a>
             </div>
           </li>
         </ul>
@@ -42,7 +42,11 @@
         <!-- 右側メニュー : Contactページへのリンク -->
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a href="contact.html" class="nav-link btn btn-info">Contact</a>
+
+
+            <a href="contact.html" class="nav-link btn btn-info">
+              <router-link to="contact">Contact</router-link>
+            </a>
           </li>
         </ul>
       </div><!-- /ナビゲーション -->
