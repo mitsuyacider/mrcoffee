@@ -21,13 +21,13 @@
             <router-link to="/">Top<span class="sr-only">(current)</span></router-link>
           </li>
           <li class="nav-item">
-            <a href="#about" class="nav-link">About</a>
+            <router-link class="nav-link" to="/#about">About</router-link>
           </li>
           <li class="nav-item">
-            <a href="#menu" class="nav-link">Menu</a>
+            <router-link class="nav-link" to="/#menu">Menu</router-link>
           </li>
           <li class="nav-item">
-            <a href="#coupon" class="nav-link">Coupon</a>
+            <router-link class="nav-link" to="/#coupon">Coupon</router-link>
           </li>
           <!-- ドロップダウン -->
           <li class="nav-item dropdown">
@@ -35,8 +35,8 @@
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Information
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a href="#shop" class="dropdown-item">Shop</a>
-              <a href="#access" class="dropdown-item">Access</a>
+              <router-link class="dropdown-item" to="/#shop">Shop</router-link>
+              <router-link class="dropdown-item" to="/#access">Access</router-link>
             </div>
           </li>
         </ul>
